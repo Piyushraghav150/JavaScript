@@ -184,6 +184,55 @@
 
 
 // Function in Js // 
+// basic function //
+// function myFunction() {
+//     console.log("Welcome in JS 1");
+//     console.log("Welcome in JS 2");
+//     console.log("Welcome in JS 3");
+//     console.log("Welcome in JS 4");
+//     console.log("Welcome in JS 5");
+// }
+// myFunction();
+// Function run //
+// function OneNumPrt(x, y) {
+//     console.log("Done");
+//     return 1 + (x + y) / 2
+// }
+// let a = 4;
+// let b = 5;
+// let c = 6;
+
+// console.log("One Number Print b and c is ", OneNumPrt(b, c));
+// console.log("One Number Print a and b is ", OneNumPrt(a, b));
+// console.log("One Number Print a and c is ", OneNumPrt(a, c));
+// Arrow function //
+// const hello = () => {
+//     console.log("Hey you")
+//     return "hi"
+// }
+// function OneNumPrt(x, y) {
+//     console.log("Done");
+//     return 1 + (x + y) / 2
+// }
+
+// const sum = (p, q) => {
+//     return p + q
+// }
+// let a = 4;
+// let b = 5;
+// let c = 6;
+
+// console.log("One Number Print b and c is ", OneNumPrt(b, c));
+// console.log("One Number Print a and b is ", OneNumPrt(a, b));
+// console.log("One Number Print a and c is ", OneNumPrt(a, c));
+// console.log(sum(10,5));
+// hello();
+// let d = hello();
+// console.log(d);
+
+
+// Strings in Js //
+
 
 
 

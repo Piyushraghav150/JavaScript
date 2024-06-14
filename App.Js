@@ -339,6 +339,40 @@
 
 
 // JavaScript in the Browser //
+// JavaScript browser //
+// console.log(alert("Hello"));
+// Console object Methods //
+// console.log(console)
+// console.error("Hey error")
+// console.assert(10>29)
+// console.assert(10<29)
+// console.clear()
+// obj = {a:1, b:2, c:3}
+// console.table(obj)
+// console.warn("Hey")
+// console.info("This is me")
+
+// alert prompt confirm //
+// alert("Hey whats you");
+// let a = prompt("Enter the value of a?");
+// a = Number.parseInt(a);
+// console.log(a)
+// confirm //
+// alert("Enter a?")
+// let a = prompt("666")
+// a = Number.parseInt(a)
+// alert("you")
+// let write = confirm("Hello Js");
+// if (write){
+//     document.write(a)
+// }
+// else{
+//     document.write("Please me")
+// }
+
+
+// DOM in JavaScript //
+
 
 
 

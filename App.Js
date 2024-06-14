@@ -232,8 +232,113 @@
 
 
 // Strings in Js //
+// let name1 = "Rahul";
+// console.log(name1)
+// let name2 = 'Shayam';
+// console.log(name2)
+
+// Template Literals //
+// let men1 = "Ram";
+// let men2 = "Shiv";
+// let Sentence = `${men2} is a Friend of ${men1}`
+// console.log(Sentence)
+
+// Escape Sequence character //
+// let Fruit1 = 'Ap`ple';
+// console.log(Fruit1)
+// let Fruit2 = 'Bana\'na';
+// console.log(Fruit2)
+// let Fruit3 = 'Bana\"na';
+// console.log(Fruit3)
+// let Fruit4 = 'Bana\nna';
+// console.log(Fruit4)
+// let Fruit5 = 'Bana\tna';
+// console.log(Fruit5)
+// let Fruit6 = 'Bana\rna';
+// console.log(Fruit6)
+
+//  String Properties //
+// let name1 = "Rajkumar";
+// console.log(name1.length)
+// console.log(name1.toUpperCase())
+// console.log(name1.toLowerCase())
+// console.log(name1.slice(2,6))
+// console.log(name1.slice(3))
+// console.log(name1.replace("Raj","Paj"))
 
 
+// Arrays in Js //
+// const fruits = ["banana","34",5,null,true];
+// console.log(fruits)
+// console.log(fruits[0])
+// console.log(fruits[1])
+// console.log(fruits[2])
+// console.log(fruits[3])
+// console.log(fruits[2] = 8)
+// console.log(typeof fruits)
+
+// Array Methods //
+// let num = [1, 2, 3, 44, 5];
+// let b = num.toString()
+// console.log(b, typeof b)
+// let c = num.join("_")
+// console.log(c, typeof c)
+// num.pop()
+// console.log(num)
+// num.push(6)
+// console.log(num)
+// num.shift()
+// console.log(num)
+// num.unshift(66)
+// console.log(num)
+// delete num[0]
+// console.log(num)
+
+// Array Methods 2 //
+// For Each loop //
+// let num = [2, 4, 5, 6, 7, 8];   
+// num.forEach((Element) => {
+//   console.log(Element * Element);
+// });
+
+// Array.from //
+// let name1 = "Harry";
+// let arr = Array.from(name1)
+// console.log(arr)
+
+// for...of //
+// for (let i of num){
+//     console.log(i)
+// }
+
+// for...in //
+// for (let i in num){
+//     console.log(i)
+// }
+
+// Map() //
+// let arr = [10, 20, 30, 40];
+// let ar = arr.map((value, index, Element) => {
+//     return (value, index, Element)
+// })
+// console.log(ar)
+
+// Array filter //
+// let arr2 = [11, 22, 33, 44, 55];
+// let a2 = arr2.filter((a) => {
+//     return a<40
+// })
+// console.log(a2)
+
+// Reduce //
+// let arr3 = [1, 2, 3, 4, 5, 66];
+// let newarr3 = arr3.reduce((h1, h2) => {
+//     return h1 + h2
+// })
+// console.log(newarr3)
+
+
+// JavaScript in the Browser //
 
 
 

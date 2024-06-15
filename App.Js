@@ -372,6 +372,97 @@
 
 
 // DOM in JavaScript //
+// console.log(document.body)
+// console.log(document.head)
+// console.log(document.body.style.background = "green")
+// location.href = "https://codewithharry.com"
+// console.log(document.documentElement)
+// console.log(document.title)
+
+// Childern of an element //
+// console.log(document.body.firstChild)
+// console.log(document.body.lastChild)
+// console.log(document.body.childNodes)
+
+// Siblings and the parent //
+// console.log(document.body.firstChild)
+// a = document.body.firstChild
+// console.log(a.parentNode)
+// console.log(a.parentElement)
+
+// Element Only Navigation //
+// let b = document.body
+// console.log(b.firstChild)
+// console.log(b.firstElementChild)
+// console.log(b.lastElementChild)
+
+// Table links //
+// let t = document.body.firstElementChild.firstElementChild
+// console.log(t)
+// console.log(t.rows)
+// console.log(t.rows[1])
+// console.log(t.caption)
+// console.log(t.tHead)
+// console.log(t.tHead.firstElementChild)
+// console.log(t.tBodies)
+// console.log(t.tFoot)
+
+// Searching the DOM //
+// let ctitle = document.getElementsByClassName("card-title")[0]
+// ctitle.style.color = "Pink"
+// let ctitle = document.getElementById("firstcardtitle")
+// ctitle.style.color = "red"
+// let ctitles = document.querySelectorAll(".card-title")
+// ctitles[0].style.color = "blue"
+// ctitles[1].style.color = "green"
+// ctitles[2].style.color = "pink"
+// console.log(ctitles)
+// document.querySelector(".this").style.color = "red"
+// console.log(document.getElementsByTagName("a"))
+
+// matches, closest, contains //
+// let id1 = document.getElementById("id1")
+// console.log(id1)
+// console.log(id1.matches(".class"))
+// console.log(id1.matches(".box"))
+// console.log(sp1.closest(".box"))
+// console.log(id1.contains(sp1))
+// console.log(id2.contains(sp1))
+// console.log(id2)
+
+
+// DOM Propertise //
+// Console.dir //
+// console.log(document.getElementsByTagName('span')[0]);
+// console.dir(document.getElementsByTagName('span')[0]);
+
+// TagName nodeName //
+// let x = document.getElementsByTagName('span')[0]
+// console.log(x)
+// let y = document.getElementsByTagName('span')[0]
+// console.dir(y)
+// console.log(document.body.firstChild.nodeName)
+// console.log(document.body.firstElementChild.nodeName)
+
+// InnerHtml OuterHtml textcontent and hidden //
+// console.log(first.innerHTML)
+// console.log(first.outerHTML)
+// console.log(document.body.textContent)
+// console.log(first.hidden = false)
+
+// Attributes Methods //
+// let first = document.getElementById("first");
+// let a = first.getAttribute("class")
+// console.log(a)
+// console.log(first.hasAttribute("class"))
+// console.log(first.hasAttribute("style"))
+// console.log(first.removeAttribute("class"))
+// console.log(first.setAttribute("class", "true me"))
+// console.log(first.attributes)
+// console.log(first.dataset)
+
+// Insertion Methods //
+
 
 
 

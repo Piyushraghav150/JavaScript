@@ -462,6 +462,144 @@
 // console.log(first.dataset)
 
 // Insertion Methods //
+// let a = document.getElementsByTagName('div')[0]
+// a.innerHTML = a.innerHTML + '<h1>Hello World!</h1>';
+// let div = document.createElement('div');
+// div.innerHTML = '<h1>Hello World!</h1>';
+// a.append(div);
+// a.prepend(div);
+// a.before(div);
+// a.after(div);
+// a.replaceWith(div);
+
+// Insert Adjacent HTML/Text/Element //
+// first.insertAdjacentHTML('beforebegin', '<div class="test">beforebegin</div>');
+// first.insertAdjacentHTML('beforeend', '<div class="test">beforeend</div>');
+// first.insertAdjacentHTML('afterbegin', '<div class="test">afterbegin</div>');
+// first.insertAdjacentHTML('afterend', '<div class="test">afterend</div>');
+// first.remove()
+
+// Classname and Classlist //
+// first.class = "text-black red";
+// first.className = "text-black red"
+// 'text-black red'
+// first.className = "text-black yellow"
+// 'text-black yellow'
+// first.classList
+// ['text-black', 'yellow', value: 'text-black yellow']
+// first.classList.remove('yellow')
+// undefined
+// first.classList.add("red")
+// undefined
+// first.classList.toggle("red")
+// false
+// first.classList.toggle("red")
+// true
+// first.classList.contains("red")
+// true
+// first.classList.contains("yellow")
+// false
+
+// Settimeout and SetInterval //
+// settimeout-1//
+// alert("Hello")
+// setTimeout(function() {
+//     alert("I am settimeout")
+// }, 4000)
+
+// settimeout-2 //
+// document.write("Hello")
+// let a = setTimeout(function(){
+//         alert("I am inside of settimeout")
+//     }, 6000)
+// let b = prompt("Do you want to run of settimeout?")
+// if("n" == b) {
+//     clearTimeout(a)
+// }
+// console.log(a)
+
+// settimeout-3 //
+// document.write("Hello")
+// const sum = (a, b) => {
+//     console.log("Yes i am running" + (a + b))
+//     a + b
+//     }
+//     setTimeout(sum, 2000, 1, 2, 6)
+
+// setInterval //
+// setInterval(function() {
+//     alert("run setInterval")
+// }, 3000);
+
+// Events in Js //
+// Handling in Js //
+// let a = document.getElementsByClassName("container")[0]
+//  a.onclick = () => {
+//     let b = document.getElementsByClassName("container")[0]
+//     b.innerHTML = "Hello world!";
+//  }
+
+// AddEvent listner and RemoveEvent listner //
+// AddEvent listner-1 //
+// btn.addEventListener('click', function(e){
+//     alert("hello world1!")
+// })
+// btn.addEventListener('click', function(e){
+//     alert("hello world2!")
+// })
+// btn.addEventListener('click', function(e){
+//     alert("hello world3!")
+// })
+
+// AddEvent listner-2 //
+// let x = function (e) {
+//   alert("Hello World1!");
+// };
+// let y = function (e) {
+//   alert("Hello World2!");
+// };
+// btn.addEventListener("click", x);
+// btn.addEventListener("click", y);
+// let a = prompt("what is your Good Number?");
+// if (a == "2") {
+//   btn.removeEventListener("click", x);
+// }
+
+// AddEvent listner-3 //
+// let x = function (e) {
+//     console.log(e.target)
+//     alert("Hello World1!");
+//   };
+//   let y = function (e) {
+//     console.log(e)
+//     alert("Hello World2!");
+//   };
+//   btn.addEventListener("click", x);
+//   btn.addEventListener("click", y);
+//   let a = prompt("what is your Good Number?");
+//   if (a == "2") {
+//     btn.removeEventListener("click", x);
+//   }
+
+// Event Object //
+// let x = function (e) {
+//         console.log(e.target)
+//         console.log(e.type, e.clientX, e.clientY)
+// alert("Hello World1!");
+//   };
+//   let y = function (e) {
+//     console.log(e)
+//     alert("Hello World2!");
+//   };
+//   btn.addEventListener("click", x);
+//   btn.addEventListener("click", y);
+//   let a = prompt("what is your Good Number?");
+//   if (a == "2") {
+//     btn.removeEventListener("click", x);
+//   }
+
+
+// Callbacks in Js //
 
 
 

@@ -600,6 +600,182 @@
 
 
 // Callbacks in Js //
+// Synchronous and Asynchronous programming //
+// Synchronous //
+// let a = prompt("Whats is your name?");
+// let b = prompt("Whats is your age?");
+// let c = prompt("Whats is your favrate colour?");
+// console.log(a + " is " + b + " years old and has " + c + " favorite colour. ")
+
+// Asynchronous //
+// console.log("Start")
+// setTimeout(function(){
+//     console.log("Hey this is me");
+// }, 4000)
+// console.log("End")
+
+// Callbacks in Js //
+// add Script step-1 //
+// function loadScript(src, callback) {
+//   var script = document.createElement("script");
+//   script.src = src;
+
+// script Loaded step-2//
+//   script.onload = function() {
+//     console.log("Loaded script with SRC: " + src)
+//     callback(src);
+//   };
+//   document.body.appendChild(script);
+// }
+
+// step-3 + SRC add//
+// function hello(src) {
+//     alert('Hello World!' + src);
+// }
+// function Good(src) {
+//     alert('GoodName!' + src);
+// }
+// loadScript(
+//   "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js", hello
+// );
+
+// Handling errors //
+// Error add step-1//
+// function loadScript(src, callback) {
+//     var script = document.createElement("script");
+//     script.src = src;
+//     script.onload = function() {
+//       console.log("Loaded script SRC: " + src);
+//       callback(src);
+//     };
+//     document.body.appendChild(script);
+// }
+// script.onerror = function() {
+//     console.log("Loaded script with src: " + src)
+//     document.body.appendChild(script);
+//   }
+//   function hello(src) {
+//     alert('Hello!' + src);
+//   }
+//   function Good(src) {
+//     alert('good' + src);
+//   }
+//   loadScript(
+//     "https://cdn.jsdeesslivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js", hello)
+
+// Error handling step-2 //
+// function loadScript(src, callback) {
+//   var script = document.createElement("script");
+//   script.src = src;
+//   script.onload = function () {
+//     console.log("error Loaded script SRC: " + src);
+//     callback(null, src);
+//   };
+//   script.onerror = function () {
+//     console.log("Loaded script with src: " + src);
+//     callback(new Error("Src got error"))
+//   };
+//   document.body.appendChild(script);
+// }
+
+// function hello(error, src) {
+//     if(error){
+//         console.log(error)
+//         return
+//     }
+//   alert("Hello!" + src);
+// }
+// function Good(src) {
+//   alert("good" + src);
+// }
+// loadScript(
+//   "https://cdn.jsdeesslivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js",
+//   hello
+// );
+
+// Callback Hell //
+// function loadScript(src, callback) {
+//   var script = document.createElement("script");
+//   script.src = src;
+//   script.onload = function () {
+//     console.log("error Loaded script SRC: " + src);
+//     callback(null, src);
+//   };
+//   script.onerror = function () {
+//     console.log("Loaded script with src: " + src);
+//     callback(new Error("Src got error"));
+//   };
+//   document.body.appendChild(script);
+// }
+
+// function hello(error, src) {
+//   if (error) {
+//     console.log(error);
+//     return;
+//   }
+//   alert("Hello!" + src);
+// }
+// function Good(src) {
+//   alert("good" + src);
+// }
+// loadScript(
+//   "https://cdn.jsdeesslivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js",
+//   hello
+// );
+// Pyramid of Doom //
+// loadScript(
+//   "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js",
+//   function hello(error, src) {
+//     if (error) {
+//       console.log(error);
+//       sendEmergencyMessageToCeo();
+//       return;
+//     }
+//     loadScript(
+//       "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap2.bundle.min.js",
+//       function hello(error, src) {
+//         if (error) {
+//           console.log(error);
+//           sendEmergencyMessageToCeo();
+//           return;
+//         }
+//         loadScript(
+//           "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap3.bundle.min.js",
+//           function hello(error, src) {
+//             if (error) {
+//               console.log(error);
+//               sendEmergencyMessageToCeo();
+//               return;
+//             }
+//             loadScript(
+//               "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap4.bundle.min.js",
+//               function hello(error, src) {
+//                 if (error) {
+//                   console.log(error);
+//                   sendEmergencyMessageToCeo();
+//                   return;
+//                 }
+//                 loadScript(
+//                   "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap5.bundle.min.js",
+//                   function hello(error, src) {
+//                     if (error) {
+//                       console.log(error);
+//                       sendEmergencyMessageToCeo();
+//                       return;
+//                     }
+//                   }
+//                 );
+//               }
+//             );
+//           }
+//         );
+//       }
+//     );
+//   }
+// );
+
+
+// Promises in Js //
 
 
 

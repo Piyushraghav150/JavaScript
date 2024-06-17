@@ -776,6 +776,368 @@
 
 
 // Promises in Js //
+// Method-1 //
+// let promise = new Promise(function (resolve, reject) {
+//   alert("Hello");
+//   resolve(56);
+// });
+// console.log("Hello you");
+// setTimeout(function () {
+//   console.log("Hello in 3 Sec");
+// }, 5000);
+
+// Method-2 //
+// let promise = new Promise(function(resolve,reject){
+//       alert("Hello")
+//       resolve(56)
+//   })
+//   console.log("Hello one")
+//   setTimeout(function(){
+//       console.log("Hello in 2 seconds")
+//   }, 2000)
+//   console.log("my name is " + "Three")
+//   console.log(promise)
+
+// Method-3 //
+// let p1 = new Promise((resolve, reject) => {
+//   console.log("Promise is pending")
+//   setTimeout(() => {
+//       console.log("I am promise and resolved")
+//       resolve(true)
+//       reject(new Error("I am an error"))
+//   }, 5000)
+//   })
+
+//   let p2 = new Promise((resolve, reject) => {
+//   console.log("Promise is pending")
+//   setTimeout(() => {
+//       console.log("I am promise and rejected")
+//       resolve(true)
+//       reject(new Error("I am error"))
+//   }, 5000)
+//   })
+//   console.log(p1, p2)t p
+
+// .than and .catch //
+// let p1 = new Promise((resolve, reject) => {
+//   console.log("Promise is pending");
+//   setTimeout(() => {
+//     console.log("I am promise and resolved");
+//     resolve(true);
+//     reject(new Error("I am an error"));
+//   }, 5000);
+// });
+
+// let p2 = new Promise((resolve, reject) => {
+//   console.log("Promise is pending");
+//   setTimeout(() => {
+// console.log("I am promise and rejected");
+// resolve(true);
+//     reject(new Error("I am an error"));
+//   }, 5000);
+// });
+// .than //
+// p1.then((value) => {
+//   console.log(value);
+// });
+// .catch to catch error //
+// p2.catch((error) => {
+//     console.log("some error occurred in p2")
+// })
+// p2.then((value) => {
+//       console.log(value)
+//   }, (error)=>{
+//       console.log(error)
+//   })
+
+// Promise Chaining //
+// Method-1 //
+// let p1 = new Promise((resolve, reject)=>{
+//       setTimeout(()=>{
+//           console.log("Resoleved after 3 Seconds")
+//           resolve(56)
+//       }, 3000)
+//   })
+//   p1.then((value)=>{
+//         console.log(value)
+//         let p2 = new Promise((reslove, reject)=>{
+//            setTimeout(()=>{ reslove("Promise 2")},2000)
+//         })
+//         return p2
+//     }).then((value) =>{
+//           console.log("done")
+//           return 2
+//       }).then((value)=>{
+//           console.log("done2")
+//       })
+
+// Method-2 //
+// const loadScript = (src) => {
+//     return new Promise((resolve, reject) => {
+//       let script = document.createElement("script")
+//       script.type = "text/javascript"
+//       script.src = src
+//       document.body.appendChild(script)
+//       script.onload = () => {
+//         resolve("Script has been loaded");
+//       };
+//       script.onerror = () => {
+//         reject(0);
+//       };
+//     });
+//   };
+//   let p1 = loadScript(
+//       "https://cdne.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+//     );
+//     p1.then((value) => {
+//       console.log(value);
+//     }).catch((error) => {
+//       console.log("sorry")
+//     })
+
+// Attaching Handlers //
+// let p1 = new Promise((resolve, reject)=>{
+//       alert("Hey I am resolved")
+//       setTimeout(()=>{
+//           resolve(1);
+//       }, 2000)
+//   })
+//   p1.then(() =>{
+//         console.log("Hurry up")
+//         return new Promise((resolve, reject) => {
+//             setTimeout(() =>{
+//                 resolve (4)
+//             }, 4000)
+//         })
+//     })
+//     .then((value) => {console.log(value)})
+// p1.then(() =>{
+//     console.log("Congratution resolved")
+// })
+
+// Promise APIs //
+
+// Method-1 //
+// let p1 = new Promise((resolve, reject) => {
+//       setTimeout(()=>{
+//           resolve("Value 1");
+//       }, 1000)
+//   })
+//   let p2 = new Promise((resolve, reject) => {
+//       setTimeout(()=>{
+//           resolve("Value 2")
+//       }, 2000)
+//   })
+//   let p3 = new Promise((resolve, reject) => {
+//       setTimeout(()=>{
+//           resolve("Value 3");
+//       }, 1000)
+//   })
+//   p1.then((value) =>{
+//         console.log(value)
+//     })
+//     p2.then((value) =>{
+//         console.log(value)
+//     })
+//     p3.then((value) =>{
+//         console.log(value)
+//     })
+
+// Others Method//
+// let p1 = new Promise((resolve, reject) => {
+//   setTimeout(()=>{
+//       resolve("Value 1");
+//   }, 1000)
+// })
+// let p2 = new Promise((resolve, reject) => {
+//   setTimeout(()=>{
+//       resolve("Value 2")
+//   }, 2000)
+// })
+// let p3 = new Promise((resolve, reject) => {
+//   setTimeout(()=>{
+//       resolve("Value 3");
+//   }, 1000)
+// })
+// let promise_all = Promise.all([p1, p2, p3])
+// let promise_all = Promise.allSettled([p1, p2, p3])
+// let promise_all = Promise.race([p1, p2, p3])
+// let promise_all = Promise.any([p1, p2, p3])
+// let promise_all = Promise.resolve(6)
+// let promise_all = Promise.reject(new Error("Hey"))
+// promise_all.then((value) =>{
+//       console.log(value)
+//   })
+
+// Async/Await //
+// Method-1 //
+// async function piyush() {
+//   let DelhiWeather = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("27 Deg");
+//     }, 2000);
+//   });
+//   let BombayWeather = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("28 Deg");
+//     }, 3000);
+//   });
+//   DelhiWeather.then(alert)
+//   BombayWeather.then(alert)
+// }
+// console.log("Welcome to control room")
+// piyush()
+
+// Method-2 //
+// async function piyush() {
+//   let DelhiWeather = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("27 Deg");
+//     }, 2000);
+//   });
+
+//   let BombayWeather = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("28 Deg");
+//     }, 5000);
+//   });
+
+// comment-out //
+// DelhiWeather.then(alert)
+// BombayWeather.then(alert)
+
+//   console.log("Fetching DelhiWeather ...");
+//   let DW = await DelhiWeather;
+//   console.log("Fetching BombayWeather ...");
+//   let BW = await BombayWeather;
+//   console.log("Fetched BombayWeather: " + BW);
+//   return [DelhiW, BombayW];
+// }
+// console.log("Welcome control Wheather room")
+// let a = piyush()
+// a.then((value) => {
+//   console.log(value)
+// })
+
+// Method-3 //
+// add-let cherry //
+// async function piyush() {
+//   let DelhiWeather = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("27 Deg");
+//     }, 2000);
+//   });
+
+//   let BombayWeather = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("28 Deg");
+//     }, 5000);
+//   });
+
+// comment-out //
+// DelhiWeather.then(alert)
+// BombayWeather.then(alert)
+
+//   console.log("Fetching DelhiWeather Please wait ...");
+//   let DelhiW = await DelhiWeather;
+//   console.log("Fetched Delhi Weather: " + DelhiW)
+//   console.log("Fetching BombayWeather Please wait...");
+//   let BombayW = await BombayWeather;
+//   console.log("Fetched BombayWeather: " + BombayW);
+//   return [DelhiW, BombayW];
+// }
+// const cherry = async () => {
+//   console.log("Hey I am cherry");
+// };
+// const main = async () => {
+//   console.log("Welcome control Wheather room");
+//   let a = await piyush();
+//   let b = await cherry();
+// };
+// main();
+
+// Error Handling try catch //
+// setTimeout(()=>{
+//       console.log("Wifi....")
+//   }, 1000)
+// try //
+//   try{
+//       console.log(Rahul)
+//   }
+// catch //
+//   catch(error){
+//       console.log(error)
+//   }
+//   setTimeout(()=>{
+//       console.log("Username ....")
+//   }, 2000)
+//   setTimeout(()=>{
+//       console.log("facebook id ....")
+//   }, 3000)
+//   setTimeout(()=>{
+//       console.log("MNo ....")
+//   }, 4000)
+
+// The Error object //
+// Method-1 //
+// try {
+//   piyush;
+// } catch (error) {
+//   console.log(error);
+// }
+
+// Method-2 //
+// try {
+//   piyush;
+// } catch (error) {
+//   console.log(error.name);
+//   console.log(error.message);
+// }
+
+// Method-3 //
+// try {
+//   let age = prompt("Enter your age?");
+//   age = Number.parseInt(age);
+//   if (age > 150) {
+//     throw new ReferenceError("This is an error");
+//   }
+// } catch (error) {
+//   console.log(error.name);
+//   console.log(error.message);
+//   console.log(error.stack);
+// }
+// console.log("This is running");
+
+// Finally Clause //
+// Method-1 //
+// try{
+//       let a = 0;
+//       console.log(program)
+//       console.log("program run done")
+//   }
+//   catch(err) {
+//       console.log("This is an error")
+//       console.log(p)
+//   }
+//   finally {
+//         console.log("I am a Good man")
+//     }
+
+// Method-2 function under //
+// const f = () => {
+//   try {
+//     let a = 0;
+//     console.log(program)
+//     console.log("program run");
+//     return;
+//   } catch (err) {
+//     console.log("This is error");
+//     console.log(p);
+//   } finally {
+//     console.log("I am a Good man");
+//   }
+// };
+// f();
 
 
 

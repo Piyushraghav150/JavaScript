@@ -1140,6 +1140,570 @@
 // f();
 
 
+// Network Request and Storing Data //
+// fetch API //
+// Method-1 //
+// let p = fetch("https://goweather.herokuapp.com/weather/Ny");
+// p.then((value1) => {
+//   return value1.json();
+// }).then((value2) => {
+//   console.log(value2);
+// });
+
+// Method-2 //
+// p.then((value1) => {
+//   console.log(value1.status);
+//   console.log(value1.ok);
+//   return value1.json();
+// }).then((value2) => {
+//   console.log(value2);
+// });
+
+// Method-3 //
+// p.then((response) => {
+//   console.log(response.status);
+//   console.log(response.ok);
+//   console.log(response.headers);
+//   console.log(response.text());
+//   return response.json();
+// }).then((value2) => {
+//   console.log(value2);
+// });
+
+// Post Request //
+// let options = {
+//   method: "POST",
+//   headers: {
+//     "Content-type": "application/json",
+//   },
+//   body: JSON.stringify({
+//     title: "foo",
+//     body: "bar",
+//     userId: 1,
+//   }),
+// };
+// fetch("https://jsonplaceholder.typicode.com/posts", options)
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+
+// Cookies in JS //
+// Methods //
+// alert(document.cookie)
+// console.log(document.cookie = "name= piyush888")
+
+// console.log(document.cookie)
+// document.cookie = "name=harry1122334400"
+// document.cookie = "name2=harry11223344002"
+// document.cookie = "name=harryss"
+// console.log(document.cookie)
+// console.log(document.cookie)
+// document.cookie = "name=harry1122334400"
+// document.cookie = "name2=harry11223344002"
+// document.cookie = "name=harryss"
+// let key = prompt("enter your key")
+// let value = prompt("enter your value")
+// document.cookie = `${encodeURIComponent(key)}=${encodeURIComponent(value)}`
+// console.log(document.cookie)
+
+// Local storage //
+// Method-1 add//
+// let key = prompt("Enter your colour");
+// let value = prompt("Enter your car ");
+// localStorage.setItem(key, value);
+// console.log(`The value at ${key} is ${localStorage.getItem(key)}`);
+
+// Method-2 remove//
+// let key = prompt("Enter key you want to set");
+// let value = prompt("Enter value you want to set");
+// localStorage.setItem(key, value);
+// console.log(`The value at ${key} is ${localStorage.getItem(key)}`);
+// if (key == "reds" || key == "blues") {
+//   localStorage.removeItem(key);
+// }
+// if (key == 0) {
+//   localStorage.clear();
+// }
+
+// Session Storage //
+// Methods //
+// sessionStorage.setItem("name", "harry")
+// sessionStorage.getItem("name")
+// sessionStorage.clear()
+// sessionStorage.removeItem()
+// window.onstorage = (e)=>{
+//     alert("change")
+//     console.log(e)
+// }
+// localStorage.setItem("name", "harry")
+// localStorage.setItem("name", "harry2")
+
+// OOPS Object Oriented Programming Systems in JS //
+// Prototype //
+// Method prototype //
+// let a = {
+//   name2: "rahul",
+//   language: "JavaScript",
+// };
+// console.log(a);
+// let p = {
+//   run: () => {
+//     alert("run");
+//   },
+// };
+// p.__proto__ = {
+//   name: "Jackey",
+// };
+// a.__proto__ = p;
+// a.run();
+// console.log(a.name);
+
+// Classes and Objects //
+// Method-1 //
+// class RailwayForm {
+//   submit() {
+//     alert("form is an  submitted");
+//   }
+//   cancel() {
+//     alert("This form is by cancelled");
+//   }
+// }
+// let harry = new RailwayForm();
+// let carry = new RailwayForm();
+// harry.submit();
+// carry.submit();
+// carry.cancel();
+
+// Method-2 //
+// class RailwayForm {
+//   submit() {
+//     alert(
+//       this.name + ": Your form is submitted for train number:" + this.trinno
+//     );
+//   }
+//   cancel() {
+//     alert(
+//       this.name + ": This form is cancelled for train number:" + this.trinno
+//     );
+//   }
+//   fill(givenname, trinno) {
+//     this.name = givenname;
+//     this.trinno = trinno;
+//   }
+// }
+// let piyushform = new RailwayForm();
+// piyushform.fill("piyush", 12345);
+// let carryform1 = new RailwayForm();
+// let carryform2 = new RailwayForm();
+// carryform1.fill("Carry", 22222);
+// carryform2.fill("Carry", 2222233);
+// piyushform.submit();
+// carryform1.submit();
+// carryform2.submit();
+// carryform1.cancel();
+
+// Constructors in JS //
+// Method-1 //
+// class RailwayForm {
+//   constructor() {
+//     console.log("CONSTRUCTOR CALLED...me");
+//   }
+//   submit() {
+//     alert(
+//       this.name + ": Your form is submitted for train number1:" + this.trinno
+//     );
+//   }
+//   cancel() {
+//     alert(
+//       this.name + ": This form is cancelled for train number2:" + this.trinno
+//     );
+//   }
+//   fill(givenname, trinno) {
+//     this.name = givenname;
+//     this.trinno = trinno;
+//   }
+// }
+// let harryform = new RailwayForm();
+// let carryform1 = new RailwayForm();
+// let carryform2 = new RailwayForm();
+// harryform.submit();
+// carryform1.submit();
+// carryform2.submit();
+// carryform1.cancel();
+
+// Method-2 //
+// class RailwayForm {
+//   constructor(givenname, trainno, address) {
+//     console.log("CONSTRUCTOR CALLED..." + givenname + " " + trainno);
+//     this.name = givenname;
+//     this.trainno = trainno;
+//     this.address = address;
+//   }
+//   preview() {
+//     alert(
+//       this.name +
+//         ": Your form is for train number: " +
+//         this.trainno +
+//         " and your address is " +
+//         this.trainno
+//     );
+//   }
+//   submit() {
+//     alert(
+//       this.name + ": Your form is submitted for train number: " + this.trainno
+//     );
+//   }
+//   cancel() {
+//     alert(
+//       this.name + ": This form is cancelled for train number: " + this.trainno
+//     );
+//     this.trainno = 0;
+//   }
+// }
+// let harryForm = new RailwayForm(
+//   "Harry",
+//   13488,
+//   "420, hshhsh, sjsj, jsjs-77787"
+// );
+// harryForm.preview();
+// harryForm.submit();
+// harryForm.cancel();
+// harryForm.preview();
+
+// Inheritance extends Keywords //
+// Method-1 //
+// class Animal {
+//   constructor(name, colour) {
+//     this.name = name;
+//     this.colour = colour;
+//   }
+//   run() {
+//     console.log(this.name + " is running!");
+//   }
+//   shout() {
+//     console.log(this.name + " is shouting!");
+//   }
+// }
+// class Monkey {
+//   constructor(name, colour) {
+//     this.name = name;
+//     this.colour = colour;
+//   }
+//   run() {
+//     console.log(this.name + " is running!");
+//   }
+//   shout() {
+//     console.log(this.name + " is shouting!");
+//   }
+//   eatBanana() {
+//     console.log(this.name + " is eating banana");
+//   }
+// }
+// let ani = new Animal("Bruno", "white");
+// let m = new Monkey("Chimpu", "orange");
+// ani.shout();
+// m.eatBanana();
+
+// Method-2 //
+// class Animal {
+//   constructor(name, colour) {
+//     this.name = name;
+//     this.colour = colour;
+//   }
+//   run() {
+//     console.log(this.name + " is running!");
+//     console.log(this.colour + " is dog!");
+//   }
+//   shout() {
+//     console.log(this.name + " is Shouting!");
+//     console.log(this.colour + " is cat!");
+//   }
+// }
+// class Monkey extends Animal {
+//   eatBanana() {
+//     console.log(this.name + " is eating banana");
+//     console.log(this.colour + " is eating apple");
+//   }
+//   hide() {
+//     console.log(`${this.name} is hiding`);
+//   }
+// }
+// let ani = new Animal("Bruno", "white");
+// let m = new Monkey("Chimpu", "orange");
+// ani.run();
+// ani.shout();
+// m.eatBanana();
+// m.hide();
+
+// Method Overriding //
+// Method-1 //
+// class Employee {
+//   login() {
+//     console.log(`Employee has logged in`);
+//   }
+//   logout() {
+//     console.log(`Employee has logged out`);
+//   }
+//   requestLeaves(leaves) {
+//     console.log(`Employee has requested ${leaves} leaves`);
+//   }
+// }
+// class Programmer extends Employee {
+//   requestCoffe(x) {
+//     console.log(`Employee has requested ${x} coffees`);
+//   }
+// }
+// let e = new Employee();
+// e.login();
+// e.requestLeaves(3);
+
+// Method-2 //
+// class Employee {
+//   login() {
+//     console.log(`Employee has logged in`);
+//   }
+//   logout() {
+//     console.log(`Employee has logged out`);
+//   }
+//   requestLeaves(leaves) {
+//     console.log(`Employee has requested ${leaves} leaves - Auto approved`);
+//   }
+// }
+// class Programmer extends Employee {
+//   requestCoffe(x) {
+//     console.log(`Employee has requested ${x} coffees`);
+//   }
+//   requestLeaves(leaves) {
+//     super.requestLeaves(4);
+//     console.log("One extra leaves");
+//     console.log(`Employee has requested ${leaves + 1} leaves (one extra)`)
+//   }
+// }
+// let e = new Programmer();
+// e.login();
+// e.requestLeaves(3);
+
+// Overriding Constructors //
+// class Employee {
+//   constructor(name) {
+//     console.log(`${name} - constructor is here`);
+//     this.name = name;
+//   }
+//   login() {
+//     console.log(`Employee has logged in`);
+//   }
+//   logout() {
+//     console.log(`Employee has logged out`);
+//   }
+//   requestLeaves(leaves) {
+//     console.log(`Employee has requested ${leaves} leaves - Auto approved`);
+//   }
+// }
+// class Programmer extends Employee {
+//   constructor(name) {
+//     super(name);
+//     console.log(`This is a newly construtor`);
+//   }
+//   requestCoffe(x) {
+//     console.log(`Emp has requested ${x} coffees`);
+//   }
+//   requestLeaves(leaves) {
+//     super.requestLeaves(4);
+//     console.log("One extra leaves");
+//   }
+// }
+// let e = new Programmer("Harry");
+// e.login();
+// e.requestLeaves(3);
+
+// Static Methods //
+// class Animal {
+//   constructor(name) {
+//     this.name = Animal.capitalize(name);
+//   }
+//   walk() {
+//     alert("Animal " + this.name + " is walking");
+//   }
+//   static capitalize(name) {
+//     return name.charAt(0).toUpperCase() + name.substr(1, name.length);
+//   }
+// }
+// j = new Animal("jack");
+// j.walk();
+
+// getters and setters and instance of Operator //
+// Method-1 //
+// class Animal {
+//   constructor(name) {
+//     this._name = name;
+//   }
+//   fly() {
+//     alert("Mai ud rha hu");
+//   }
+//   get name() {
+//     return this._name;
+//   }
+//   set name(newName) {
+//     this._name = newName;
+//   }
+// }
+// let a = new Animal("Bird")
+// a.fly()
+// console.log(a.name)
+// a.name = "jack"
+// console.log(a.name)
+
+// Method-2 //
+// instance of Opertor //
+// class Animal {
+//   constructor(name) {
+//     this._name = name;
+//   }
+//   fly() {
+//     alert("Mai ud rha hu");
+//   }
+//   get name() {
+//     return this._name;
+//   }
+//   set name(newName) {
+//     this._name = newName;
+//   }
+// }
+// class Rabbit extends Animal {
+//   eatCarrot() {
+//     console.log("Eating carrot");
+//   }
+// }
+// let a = new Rabbit("Bird2");
+// a.fly();
+// console.log(a.name);
+// a.name = "jack";
+// console.log(a.name);
+// let c = 55;
+// console.log(a instanceof Animal);
+// console.log(a instanceof Rabbit);
+// console.log(c instanceof Animal);
+
+// Advanced JavaScript //
+// IIFE in JS //
+// let a = () => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve(456);
+//     }, 2000);
+//   });
+// };
+// let f = async () => {
+//     let b = await a();
+//     console.log(b);
+//     let c = await a();
+//     console.log(c);
+//     let d = await a();
+//     console.log(d);
+//     console.log("done");
+//   };
+// f();
+// console.log(d);
+
+// Destructuring //
+// Method-1 //
+// let arr = [3, 4, 5, 6, 7, 8, 99]
+// let {a, b} = { a: 1, b: 5 }
+// console.log(a, b)
+
+// Method-2 //
+// Spread Opertor //
+//  let arr1 = [3, 5, 8]
+//  let obj1 = { ...arr1 }
+//  console.log(obj1)
+//  function sum(v1, v2, v3) {
+//     return v1 + v2 + v3
+//  }
+// console.log(sum(...arr1))
+// let obj2 = {
+//   name: "Piyush",
+//   company: "ABC",
+//   address: "XYZ",
+// }
+// console.log({ name: "Rahul", company: "ABC", ...obj2 })
+
+// local & global Scopes //
+// var is run //
+// {
+//   var a = 1;
+// }
+// console.log(a);
+
+// let is error //
+// {
+//   let a = 2;
+// }
+// console.log(a);
+
+// Not error //
+// function ax() {
+//   let a = 4;
+//   console.log(a);
+// }
+// ax();
+// console.log(a);
+
+// Hoisting in JavaScript //
+// console.log(a)
+// great()
+// function great() {
+//     console.log("Good morning")
+// }
+// var a = 9;
+// console.log(a)
+
+// Closures in JavaScript //
+// function init() {
+//   var name = "Mazilla";
+//   function displayName() {
+//     console.log(name);
+//   }
+//   name = "Harry";
+//   return displayName;
+// }
+// let c = init();
+// c();
+// function returnFunc() {
+//   const x = () => {
+//     let a = 1;
+//     console.log(a);
+//     const y = () => {
+//       console.log(a);
+//       const z = () => {
+//         console.log(a);
+//       };
+//       z();
+//     };
+//     a = 999;
+//     y();
+//   };
+//   return x;
+// }
+// let a = returnFunc();
+// a();
+
+// Arrow Functions Revisited //
+// const sayHello = (name1, greeting) => console.log(greeting + " " + name1);
+// const x = {
+//   name1: "Harry",
+//   role: "Js Developer",
+//   exp: 10,
+//   show: function () {
+//     setTimeout(function () {
+//       console.log(`The name is ${this.name1}\nThe role is ${this.role}`);
+//     }, 2000);
+//   },
+// };
+// x.show();
+
+
+
+
+
 
 
 
